@@ -5,7 +5,7 @@ imshow(im)
 
 % detect in the image using a pretrained YOLOX
 detector = yoloxObjectDetector("tiny-coco");
-[dbox, dscore, dlabel] = detect(detector, manU);
+[dbox, dscore, dlabel] = detect(detector, im);
 
 % visualize detections
 detectedIm = insertObjectAnnotation(im,"rectangle",dbox, dlabel);
